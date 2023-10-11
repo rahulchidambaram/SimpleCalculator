@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #calculator {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px;
+        margin: 5px;
+        width: 40px;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        background-color: #eee;
+      }
+
+      button.operator {
+        background-color: #f69c9c;
+        color: #fff;
+      }
+
+      button.equals {
+        background-color: #5cb85c;
+        color: #fff;
+      }
+
+      button.clear {
+        background-color: #d9534f;
+        width: auto;
+        color: #fff;
+      }
+
+      button:hover {
+        opacity: 0.6;
+      }
+
+      #result {
+        font-size: 24px;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <input type="text" id="result" value="" readonly />
+
+      <p>
+        <button onclick="
+          calculation += '1';
+          console.log(calculation);
+          updateResult()
+        ">1</button>
+        
+        <button onclick="
+          calculation += '2';
+          console.log(calculation);
+          updateResult()
+        ">2</button>
+
+        <button onclick="
+          calculation += '3';
+          console.log(calculation);
+          updateResult()
+        ">3</button>
+
+        <button class="operator" onclick="
+          calculation += ' + ';
+          console.log(calculation);
+          updateResult()
+        ">+</button>
+      </p>
+
+      <p>
+        <button onclick="
+          calculation += '4';
+          console.log(calculation);
+          updateResult()
+        ">4</button>
+        
+        <button onclick="
+          calculation += '5';
+          console.log(calculation);
+          updateResult()
+        ">5</button>
+
+        <button onclick="
+          calculation += '6';
+          console.log(calculation);
+          updateResult()
+        ">6</button>
+
+        <button class="operator" onclick="
+          calculation += ' - ';
+          console.log(calculation);
+          updateResult()
+        ">-</button>
+      </p>
+
+      <p>
+        <button onclick="
+          calculation += '7';
+          console.log(calculation);
+          updateResult()
+        ">7</button>
+        
+        <button onclick="
+          calculation += '8';
+          console.log(calculation);
+          updateResult()
+        ">8</button>
+
+        <button onclick="
+          calculation += '9';
+          console.log(calculation);
+          updateResult()
+        ">9</button>
+
+        <button class="operator" onclick="
+          calculation += ' * ';
+          console.log(calculation);
+          updateResult()
+        ">*</button>
+      </p>
+
+      <p>
+        <button onclick="
+          calculation += '0';
+          console.log(calculation);
+          updateResult()
+          updateResult()
+        ">0</button>
+        
+        <button onclick="
+          calculation += '.';
+          console.log(calculation);
+          updateResult()
+        ">.</button>
+
+        <button class="equals" onclick="
+          calculation = eval(calculation);
+          console.log(calculation);
+          updateResult()
+        ">=</button>
+
+        <button class="operator" onclick="
+          calculation += ' / ';
+          console.log(calculation);
+          updateResult()
+        ">/</button>
+      </p> 
+
+      <p>
+        <button class="clear" onclick="
+          calculation = '';
+          console.log(calculation);
+          updateResult()
+        ">Clear</button>
+      </p>
+      
+    </div>
+   
+    <script>
+      let calculation = '';
+
+      function updateResult() {
+        document.getElementById('result').value = calculation;
+      }
+    </script>
+  </body>
+</html>
